@@ -8,6 +8,7 @@ from subprocess import STDOUT
 from subprocess import CalledProcessError
 from subprocess import check_output
 from typing import Any
+from typing import Dict
 from typing import Literal
 from typing import Optional
 from typing import TypedDict
@@ -101,7 +102,7 @@ class ScanResult:
 
 
 class Scanner(abc.ABC):
-    _info: dict[ProgramName, ScannerInfo]
+    _info: Dict[ProgramName, ScannerInfo]
     _program: ProgramName
 
     @abc.abstractmethod

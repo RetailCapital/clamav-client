@@ -12,6 +12,7 @@ import socket
 import struct
 from typing import Any
 from typing import BinaryIO
+from typing import Dict
 from typing import Optional
 from typing import Union
 from typing import Tuple
@@ -23,7 +24,7 @@ scan_response = re.compile(
 
 ScanStatus = str
 ScanResult = Tuple[ScanStatus, Optional[str]]
-ScanResults = dict[str, ScanResult]
+ScanResults = Dict[str, ScanResult]
 
 
 class ClamdError(Exception):
