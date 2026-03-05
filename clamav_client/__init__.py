@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import importlib.metadata
 
 from clamav_client.scanner import get_scanner

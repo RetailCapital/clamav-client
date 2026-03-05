@@ -1,5 +1,5 @@
 """A general-purpose scanner compatible with both ``clamd`` and ``clamscan``."""
-
+from __future__ import annotations
 import abc
 import re
 from dataclasses import dataclass
