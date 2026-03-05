@@ -4,6 +4,7 @@ connections.
 This module stays as close as possible to its original counterpart, the clamd
 project on which this code is based, to maintain backward compatibility.
 """
+from __future__ import annotations
 
 import contextlib
 import re
