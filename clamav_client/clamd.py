@@ -14,6 +14,7 @@ from typing import Any
 from typing import BinaryIO
 from typing import Optional
 from typing import Union
+from typing import Tuple
 
 scan_response = re.compile(
     r"^(?P<path>[^:]+): ((?P<virus>.+?) )?(?P<status>(FOUND|OK|ERROR))$"
@@ -21,7 +22,7 @@ scan_response = re.compile(
 
 
 ScanStatus = str
-ScanResult = tuple[ScanStatus, Optional[str]]
+ScanResult = Tuple[ScanStatus, Optional[str]]
 ScanResults = dict[str, ScanResult]
 
 
@@ -250,7 +251,7 @@ class ClamdNetworkSocket:
         """
         self.clamd_socket.close()
 
-    def _parse_response(self, msg: str) -> tuple[Union[str, Any], ...]:
+    def _parse_response(self, msg: str) -> Tuple[Union[str, Any], ...]:
         """
         parses responses for SCAN, CONTSCAN, MULTISCAN and STREAM commands.
         """
